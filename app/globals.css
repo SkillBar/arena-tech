@@ -7137,3 +7137,606 @@ img {
     padding-top: 80px;
   }
 }
+
+/* JST Project — desktop game launcher case study */
+.jst-case {
+  --jst-black: #121212;
+  --jst-panel: #1e1e1e;
+  --jst-line: rgba(255, 255, 255, 0.1);
+  --jst-muted: rgba(255, 255, 255, 0.68);
+  --jst-white: #ffffff;
+  --jst-red: #e85555;
+  --jst-green: #4ade80;
+  --jst-column: min(1200px, calc(100vw - 12.5vw));
+  --jst-frame-full: min(1200px, 100%);
+  --jst-frame-hero: 100%;
+  color: var(--jst-white);
+  background: var(--jst-black);
+  font-family: var(--tt-neue);
+}
+
+.jst-case > .ruler {
+  opacity: 0.12;
+}
+
+.jst-intro {
+  position: relative;
+  width: 100%;
+  padding-top: clamp(112px, 11vw, 152px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jst-intro-copy {
+  position: relative;
+  z-index: 5;
+  width: var(--jst-column);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.jst-eyebrow {
+  margin: 0 0 16px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.jst-intro-title {
+  margin: 0;
+  max-width: 680px;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.jst-intro-lead {
+  margin: 24px 0 0;
+  max-width: 560px;
+  font-size: clamp(17px, 1.4vw, 20px);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--jst-muted);
+  text-wrap: balance;
+}
+
+.jst-intro-stage {
+  position: relative;
+  z-index: 1;
+  width: var(--jst-column);
+  margin: clamp(32px, 4vw, 48px) auto clamp(40px, 5vw, 56px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jst-stage-hero {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.jst-stage-hero img {
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.jst-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.jst-shot {
+  margin: 0;
+}
+
+.jst-stage-shot {
+  display: none;
+}
+
+.jst-block-head h2,
+.jst-feature-copy h2,
+.jst-outro-copy h2,
+.jst-tasks h3 {
+  margin: 0;
+  font-size: clamp(32px, 3.8vw, 48px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.jst-block-head p {
+  margin: 20px auto 0;
+  max-width: 560px;
+  font-size: clamp(17px, 1.4vw, 20px);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--jst-muted);
+  text-wrap: balance;
+}
+
+.jst-overview {
+  padding-top: clamp(80px, 9vw, 128px);
+}
+
+.jst-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.jst-meta-note {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 140px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: var(--jst-panel);
+  border: 1px solid var(--jst-line);
+  transform: rotate(var(--note-rotation, 0deg));
+}
+
+.jst-meta-note span {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.jst-meta-note strong {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--note-color, var(--jst-white));
+}
+
+.jst-tasks {
+  max-width: 640px;
+  margin: 48px auto 0;
+  padding: 28px 32px;
+  border-radius: 16px;
+  background: var(--jst-panel);
+  border: 1px solid var(--jst-line);
+}
+
+.jst-tasks h3 {
+  margin-bottom: 16px;
+  font-size: clamp(24px, 2.8vw, 32px);
+}
+
+.jst-tasks ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.jst-tasks li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.88);
+  text-wrap: balance;
+}
+
+.jst-tasks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--jst-red);
+}
+
+.jst-ecosystem {
+  display: flex;
+  gap: 28px;
+  margin-top: 48px;
+  padding-bottom: 72px;
+}
+
+.jst-ecosystem-card {
+  flex: 1 1 33.3%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  border-radius: 16px;
+  background: var(--jst-panel);
+  border: 1px solid var(--jst-line);
+  text-align: center;
+}
+
+.jst-ecosystem-card h3 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--card-accent, var(--jst-red));
+}
+
+.jst-ecosystem-card p {
+  margin: 0 auto;
+  max-width: 280px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.82);
+  text-wrap: balance;
+}
+
+.jst-look {
+  position: relative;
+  padding: 4% 0 8%;
+}
+
+.jst-look-scene {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.jst-look-shot {
+  width: min(560px, 72vw);
+  margin: 0;
+}
+
+/* Feature blocks — Loo/Only-style: copy on top, large desktop frame below */
+.jst-feature {
+  padding-top: clamp(64px, 8vw, 120px);
+}
+
+.jst-feature-copy {
+  max-width: 560px;
+  margin-bottom: clamp(28px, 4vw, 40px);
+}
+
+.jst-feature-kicker {
+  margin: 0 0 16px;
+  padding: 7px 12px;
+  display: inline-flex;
+  border-radius: 999px;
+  border: 1px solid var(--jst-line);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.jst-feature-copy h2 {
+  margin: 0 0 16px;
+}
+
+.jst-feature-copy p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--jst-muted);
+  text-wrap: balance;
+}
+
+.jst-feature-visual {
+  width: 100%;
+}
+
+.jst-feature-visual--single {
+  display: flex;
+  justify-content: center;
+}
+
+.jst-feature-visual--single .jst-feature-shot {
+  width: var(--jst-frame-full);
+}
+
+.jst-feature-visual--duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+}
+
+.jst-feature-visual--duo .jst-feature-shot {
+  width: 100%;
+}
+
+/* Registration — pinned scroll slideshow */
+.jst-register-scroll {
+  position: relative;
+  padding-top: clamp(64px, 8vw, 120px);
+}
+
+.jst-register-scroll-head {
+  width: var(--jst-column);
+  margin-inline: auto;
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+.jst-register-scroll-pin {
+  width: var(--jst-column);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 48px;
+}
+
+.jst-scrollshow-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jst-scrollshow-step {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--jst-line);
+  background: var(--jst-panel);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.jst-scrollshow-step.is-active {
+  border-color: rgba(232, 85, 85, 0.55);
+  background: rgba(232, 85, 85, 0.08);
+}
+
+.jst-scrollshow-step span {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.jst-scrollshow-step strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.jst-scrollshow-progress {
+  height: 2px;
+  background: var(--jst-line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.jst-scrollshow-progress span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--jst-red);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.jst-scrollshow-slides {
+  --slide-max-h: calc(100vh - 240px);
+  position: relative;
+  width: min(840px, 90vw, calc(var(--slide-max-h) * 960 / 600));
+  margin-inline: auto;
+  aspect-ratio: 960 / 600;
+}
+
+.jst-scrollshow-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+.jst-scrollshow-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.jst-scrollshow-hint {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.jst-block {
+  width: var(--jst-column);
+  margin-inline: auto;
+}
+
+.jst-block-head {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.jst-colors {
+  padding: clamp(64px, 8vw, 112px) 0;
+}
+
+.jst-palette {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.jst-swatch {
+  flex: 0 0 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.jst-swatch::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 72px;
+  border-radius: 12px;
+  background: var(--swatch);
+  border: 1px solid var(--jst-line);
+}
+
+.jst-swatch span {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.jst-swatch em {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.jst-outro {
+  padding: clamp(64px, 8vw, 112px) 0 clamp(80px, 10vw, 128px);
+}
+
+.jst-outro-copy {
+  max-width: 560px;
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+.jst-outro-copy p {
+  margin: 20px 0 0;
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--jst-muted);
+  text-wrap: balance;
+}
+
+.jst-back-link {
+  display: inline-flex;
+  margin-top: 28px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--jst-red);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.jst-back-link:hover {
+  opacity: 0.75;
+}
+
+.jst-outro-visual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.jst-outro-shot {
+  width: var(--jst-frame-full);
+  margin: 0;
+}
+
+.jst-case .cta-section {
+  padding-top: clamp(64px, 8vw, 96px);
+}
+
+@media (max-width: 1199.98px) {
+  .jst-feature-visual--duo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .jst-intro-stage {
+    width: min(520px, calc(100vw - 32px));
+    margin-bottom: 40px;
+  }
+
+  .jst-stage-hero {
+    width: 100%;
+  }
+
+  .jst-ecosystem {
+    flex-direction: column;
+  }
+
+  .jst-feature-visual--single .jst-feature-shot,
+  .jst-feature-visual--duo .jst-feature-shot,
+  .jst-scrollshow-slides,
+  .jst-outro-shot,
+  .jst-look-shot {
+    width: min(520px, 92vw);
+    --slide-max-h: none;
+    aspect-ratio: auto;
+  }
+
+  .jst-scrollshow-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .jst-scrollshow-slides {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .jst-scrollshow-slide {
+    position: relative;
+    inset: auto;
+  }
+
+  .jst-scrollshow-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+  }
+
+  .jst-scrollshow-hint {
+    display: none;
+  }
+
+  .jst-meta {
+    gap: 12px;
+  }
+
+  .jst-meta-note {
+    min-width: calc(50% - 8px);
+  }
+
+  .jst-case .cta-section {
+    padding-top: 64px;
+  }
+}

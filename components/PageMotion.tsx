@@ -8,17 +8,20 @@ import { setupCaseFolderHoverAnimations } from "@/components/caseFolderMotion";
 import { setupFloatingLabelAnimations } from "@/components/floatingLabelMotion";
 import { setupHeroEntranceAnimations } from "@/components/heroEntranceMotion";
 import { setupAiTradeCaseMotion } from "@/components/aiTradeCaseMotion";
+import { setupJstCaseMotion } from "@/components/jstCaseMotion";
 import { setupMusicGenCaseMotion } from "@/components/musicGenCaseMotion";
 import { setupTgMagicScrollBackground } from "@/components/tgMagicBackgroundMotion";
 
 export function PageMotion({
   home = false,
   musicgen = false,
-  aitrade = false
+  aitrade = false,
+  jst = false
 }: {
   home?: boolean;
   musicgen?: boolean;
   aitrade?: boolean;
+  jst?: boolean;
 }) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -266,6 +269,7 @@ export function PageMotion({
     const cleanupTgMagicBackground = home ? setupTgMagicScrollBackground() : undefined;
     const cleanupMusicGenCase = musicgen ? setupMusicGenCaseMotion(reducedMotion) : undefined;
     const cleanupAiTradeCase = aitrade ? setupAiTradeCaseMotion(reducedMotion) : undefined;
+    const cleanupJstCase = jst ? setupJstCaseMotion(reducedMotion) : undefined;
     const cleanupCaseFolderHover = setupCaseFolderHoverAnimations();
 
     const commentCard = document.querySelector<HTMLElement>(".comment-card");
@@ -322,6 +326,7 @@ export function PageMotion({
       cleanupTgMagicBackground?.();
       cleanupMusicGenCase?.();
       cleanupAiTradeCase?.();
+      cleanupJstCase?.();
       cleanupCaseFolderHover?.();
       cleanupHeroEntrance?.();
       gsap.ticker.remove(lenisRaf);
@@ -329,7 +334,7 @@ export function PageMotion({
       lenis.destroy();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [home, musicgen, aitrade]);
+  }, [home, musicgen, aitrade, jst]);
 
   return null;
 }

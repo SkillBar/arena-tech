@@ -16,7 +16,7 @@ export type CaseStudySection = {
 export type CaseStudy = {
   number: string;
   slug: string;
-  variant?: "default" | "musicgen-presentation" | "aitrade-presentation";
+  variant?: "default" | "musicgen-presentation" | "aitrade-presentation" | "jst-presentation";
   title: string;
   date: string;
   summary: string;
@@ -43,6 +43,13 @@ const musicGenNotes: CaseMetaNote[] = [
   { label: "Timeline", value: "6 Weeks", color: "#fe9511", rotation: 7 },
   { label: "Team", value: "Design + AI", color: "#2b2b2b", rotation: 5 },
   { label: "Platform", value: "iOS / Android", color: "#fdfdfd", rotation: 2 }
+];
+
+const jstNotes: CaseMetaNote[] = [
+  { label: "Клиент", value: "JS Team", color: "#e85555", rotation: -4 },
+  { label: "Платформа", value: "Desktop", color: "#1e1e1e", rotation: 6 },
+  { label: "Роль", value: "UX/UI Design", color: "#4ade80", rotation: 4 },
+  { label: "Продукт", value: "Game Launcher", color: "#ffffff", rotation: 2 }
 ];
 
 export const caseStudies: CaseStudy[] = [
@@ -248,16 +255,18 @@ export const caseStudies: CaseStudy[] = [
   {
     number: "project 07",
     slug: "jst-project",
+    variant: "jst-presentation",
     title: "JST Project",
     date: "May 28, 2026",
     showOnHome: false,
     summary:
-      "Платформа для управления проектами и командной работы с акцентом на прозрачные процессы, статусы и быстрый обмен контекстом.",
-    tags: ["SaaS", "Web", "Team Tools"],
-    accent: "#2563EB",
+      "Desktop-лаунчер для MTA Province: новости, онлайн серверов и вход в игру в одном окне — без ручной настройки клиента.",
+    tags: ["Desktop", "Game", "Launcher"],
+    accent: "#E85555",
     textColor: "light",
-    cover: "/assets/images/project-jst-project.webp",
-    coverAlt: "JST Project cover mockup"
+    cover: "/assets/images/jst/promo-update.webp",
+    coverAlt: "Промо-арт обновления игрового лаунчера JST Project — Province",
+    metaNotes: jstNotes
   }
 ];
 

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { caseStudies, getCaseStudy } from "@/data/case-studies";
 import { CaseStudyDetail } from "@/components/CaseStudyDetail";
 import { AiTradeCaseStudy } from "@/components/AiTradeCaseStudy";
+import { JstCaseStudy } from "@/components/JstCaseStudy";
 import { MusicGenCaseStudy } from "@/components/MusicGenCaseStudy";
 
 type CaseStudyDetailPageProps = {
@@ -49,6 +50,10 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
 
   if (caseStudy.variant === "aitrade-presentation") {
     return <AiTradeCaseStudy caseStudy={caseStudy} />;
+  }
+
+  if (caseStudy.variant === "jst-presentation") {
+    return <JstCaseStudy caseStudy={caseStudy} />;
   }
 
   return <CaseStudyDetail caseStudy={caseStudy} />;
