@@ -1,0 +1,31 @@
+{
+  "name": "arena-tech",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:3002": "next dev -p 3002",
+    "restart": "bash scripts/restart-dev.sh 3002",
+    "build": "next build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "images:webp": "node scripts/convert-images-to-webp.mjs",
+    "images:remove-legacy": "node scripts/remove-legacy-images.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "lenis": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "sharp": "^0.34.2",
+    "typescript": "latest"
+  }
+}

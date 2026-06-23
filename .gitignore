@@ -1,0 +1,11 @@
+.next
+.next-dev-*
+node_modules
+.pnpm-store
+out
+dist
+.env*
+!.env.example
+*.log
+tsconfig.tsbuildinfo
+public/screenshots

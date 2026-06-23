@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    ".next-dev-3006/types/**/*.ts",
+    ".next-dev-3006/dev/types/**/*.ts",
+    ".next-dev-3008/types/**/*.ts",
+    ".next-dev-3008/dev/types/**/*.ts",
+    ".next-dev-3011/types/**/*.ts",
+    ".next-dev-3011/dev/types/**/*.ts",
+    ".next-dev-3012/types/**/*.ts",
+    ".next-dev-3012/dev/types/**/*.ts",
+    ".next-dev-3013/types/**/*.ts",
+    ".next-dev-3013/dev/types/**/*.ts",
+    ".next-dev-3014/types/**/*.ts",
+    ".next-dev-3014/dev/types/**/*.ts",
+    ".next-dev-3015/types/**/*.ts",
+    ".next-dev-3015/dev/types/**/*.ts",
+    ".next-dev-3016/types/**/*.ts",
+    ".next-dev-3016/dev/types/**/*.ts",
+    ".next-dev-3017/types/**/*.ts",
+    ".next-dev-3017/dev/types/**/*.ts",
+    ".next-dev-3018/types/**/*.ts",
+    ".next-dev-3018/dev/types/**/*.ts",
+    ".next-dev-3019/types/**/*.ts",
+    ".next-dev-3019/dev/types/**/*.ts",
+    ".next-dev-3020/types/**/*.ts",
+    ".next-dev-3020/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
