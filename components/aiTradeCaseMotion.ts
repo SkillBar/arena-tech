@@ -74,6 +74,8 @@ export function setupAiTradeCaseMotion(reducedMotion: boolean) {
   }
 
   if (introStage) {
+    gsap.set(introStage, { y: 0 });
+
     const introTrigger = ScrollTrigger.create({
       trigger: ".aitrade-intro",
       start: "top top",

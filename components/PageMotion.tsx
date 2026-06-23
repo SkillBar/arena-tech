@@ -23,6 +23,14 @@ export function PageMotion({
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const media = gsap.matchMedia();
     const lenis = new Lenis({
@@ -30,6 +38,8 @@ export function PageMotion({
       smoothWheel: true,
       wheelMultiplier: 0.85
     });
+
+    lenis.scrollTo(0, { immediate: true });
 
     lenis.on("scroll", ScrollTrigger.update);
 
@@ -304,7 +314,8 @@ export function PageMotion({
       }
     }
 
-    ScrollTrigger.refresh();
+    ScrollTrigger.clearScrollMemory?.();
+    ScrollTrigger.refresh(true);
 
     return () => {
       cleanupFloatingLabels?.();
