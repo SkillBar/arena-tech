@@ -7162,12 +7162,12 @@ img {
   font-family: var(--tt-neue);
 }
 
-.jst-case h1,
-.jst-case h2,
-.jst-case h3,
-.jst-case p,
-.jst-case li,
-.jst-case strong,
+.jst-case article h1,
+.jst-case article h2,
+.jst-case article h3,
+.jst-case article p,
+.jst-case article li,
+.jst-case article strong,
 .jst-case .jst-intro-lead,
 .jst-case .jst-feature-copy p,
 .jst-case .jst-block-head p,
@@ -7177,9 +7177,9 @@ img {
   font-family: var(--tt-neue);
 }
 
-.jst-case h1,
-.jst-case h2,
-.jst-case h3 {
+.jst-case article h1,
+.jst-case article h2,
+.jst-case article h3 {
   font-weight: 600;
 }
 
@@ -7711,6 +7711,17 @@ img {
 
 .jst-case .cta-section {
   padding-top: clamp(64px, 8vw, 96px);
+  font-family: var(--display);
+}
+
+.jst-case .cta-section .display-heading,
+.jst-case .cta-section .cta-heading-title {
+  font-family: var(--flux);
+  font-weight: 1000;
+}
+
+.jst-case .cta-section .cta-copy p {
+  font-family: var(--display);
 }
 
 @media (max-width: 1199.98px) {
