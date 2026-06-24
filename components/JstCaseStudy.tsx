@@ -286,7 +286,7 @@ export function JstCaseStudy({ caseStudy }: { caseStudy: CaseStudy }) {
               <h2>Цвет и типографика</h2>
               <p>
                 Тёмный gaming UI: фон #121212, панели #1E1E1E, красный для CTA и акцентов, зелёный
-                для статуса online. Sans-serif без декора — читаемость важнее эффектов.
+                для статуса online. Шрифт — TT Firs Neue: medium для текста, demibold для заголовков.
               </p>
             </div>
             <div className="jst-palette jst-reveal">

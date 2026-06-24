@@ -65,7 +65,7 @@
 @font-face {
   font-family: "TT Firs Neue";
   src: url("/assets/fonts/tt-firs-neue-medium.woff2") format("woff2");
-  font-weight: 500;
+  font-weight: 400 500;
   font-style: normal;
   font-display: swap;
 }
@@ -73,7 +73,7 @@
 @font-face {
   font-family: "TT Firs Neue";
   src: url("/assets/fonts/tt-firs-neue-demibold.woff2") format("woff2");
-  font-weight: 600;
+  font-weight: 600 700;
   font-style: normal;
   font-display: swap;
 }
@@ -96,7 +96,7 @@
   --grid: rgba(17, 18, 18, 0.055);
   --mono: "DM Mono", monospace;
   --tt-firs: "TT Firs Neue", "Inter Display", "Inter", sans-serif;
-  --tt-neue: var(--tt-firs);
+  --tt-neue: "TT Firs Neue", "Inter Display", "Inter", sans-serif;
   --display: "Inter Display", "Inter", sans-serif;
   --flux: "Flux Variable", "Inter", sans-serif;
   --hand: "Just Me Again Down Here", cursive;
@@ -7153,6 +7153,43 @@ img {
   color: var(--jst-white);
   background: var(--jst-black);
   font-family: var(--tt-neue);
+  font-weight: 500;
+}
+
+.jst-case article {
+  position: relative;
+  z-index: 1;
+  font-family: var(--tt-neue);
+}
+
+.jst-case h1,
+.jst-case h2,
+.jst-case h3,
+.jst-case p,
+.jst-case li,
+.jst-case strong,
+.jst-case .jst-intro-lead,
+.jst-case .jst-feature-copy p,
+.jst-case .jst-block-head p,
+.jst-case .jst-outro-copy p,
+.jst-case .jst-ecosystem-card p,
+.jst-case .jst-scrollshow-step strong {
+  font-family: var(--tt-neue);
+}
+
+.jst-case h1,
+.jst-case h2,
+.jst-case h3 {
+  font-weight: 600;
+}
+
+.jst-case .jst-eyebrow,
+.jst-case .jst-feature-kicker,
+.jst-case .jst-scrollshow-step span,
+.jst-case .jst-scrollshow-hint,
+.jst-case .jst-meta-note span,
+.jst-case .jst-swatch span {
+  font-family: var(--mono);
 }
 
 .jst-case > .ruler {
@@ -7192,8 +7229,9 @@ img {
 .jst-intro-title {
   margin: 0;
   max-width: 680px;
+  font-family: var(--tt-neue);
   font-size: clamp(40px, 5vw, 64px);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.08;
   letter-spacing: -0.03em;
   text-wrap: balance;
@@ -7253,8 +7291,9 @@ img {
 .jst-outro-copy h2,
 .jst-tasks h3 {
   margin: 0;
+  font-family: var(--tt-neue);
   font-size: clamp(32px, 3.8vw, 48px);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.025em;
   text-wrap: balance;
@@ -7304,6 +7343,7 @@ img {
 }
 
 .jst-meta-note strong {
+  font-family: var(--tt-neue);
   font-size: 18px;
   font-weight: 600;
   color: var(--note-color, var(--jst-white));
@@ -7373,8 +7413,9 @@ img {
 
 .jst-ecosystem-card h3 {
   margin: 0 0 16px;
+  font-family: var(--tt-neue);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   color: var(--card-accent, var(--jst-red));
 }
